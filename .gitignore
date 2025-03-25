@@ -3,3 +3,6 @@
 
 # private reusable scripts
 todo-app/todo-backend/scripts.txt
+
+# docker persisted data
+todo-app/todo-backend/redis_data
