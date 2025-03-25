@@ -24,7 +24,7 @@ router.get('/statistics', async (req, res) => {
     await setAsync('added_todos', 0);
     currentAddedTodos = 0;
   }
-  res.send({added_todos: currentAddedTodos});
+  res.send({added_todos: Number(currentAddedTodos)});
 })
 
 module.exports = router;
