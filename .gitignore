@@ -1,2 +1,5 @@
 # IDE related
 **/.idea/
+
+# private reusable scripts
+todo-app/todo-backend/scripts.txt
