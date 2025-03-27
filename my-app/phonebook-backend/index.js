@@ -2,11 +2,10 @@
 // imports
 // ======================================================
 
-require('dotenv').config()
 const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
-const Person = require('./models/person')
+const Person = require('./mongo/models/person')
 
 // ======================================================
 // middleware configuration
@@ -90,7 +89,7 @@ app.delete('/api/persons/:id', (request, response, next) => {
 })
 
 // get info
-app.get('/info', (request, response) => {
+app.get('/api/info', (request, response) => {
   Person.find({}).then(persons => {
     const count = persons.length
     const dateTime = Date()
@@ -123,12 +122,12 @@ app.put('/api/persons/:id', (request, response, next) => {
   }).catch(error => next(error))
 })
 
-app.get('/health', (req, res) => {
+app.get('/api/health', (req, res) => {
   res.send('ok')
 })
 
-app.get('/version', (req, res) => {
-  res.send('2')
+app.get('/api/version', (req, res) => {
+  res.send('3')
 })
 
 
