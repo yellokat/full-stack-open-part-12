@@ -6,3 +6,10 @@ todo-app/todo-backend/scripts.txt
 
 # docker persisted data
 todo-app/todo-backend/redis_data
+
+# node packages
+**/node_modules/
+
+# secret files
+my-app/phonebook-backend/.env
+my-app/phonebook-frontend/.env
