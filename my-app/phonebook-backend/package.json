@@ -1,0 +1,30 @@
+{
+  "name": "phonebook-backend",
+  "version": "1.0.0",
+  "description": "exercises 3.1~",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"No tests implemented yet.\"",
+    "build:ui": "rm -rf dist && cd ../phonebook-frontend && npm run build && cp -r dist ../phonebook-backend",
+    "deploy:full": "npm run build:ui && git add . ../phonebook-frontend && git commit -m 'feat : part 3 - phonebook ui update (via npm script)' && git push",
+    "lint": "eslint ."
+  },
+  "author": "Seungwon Jang",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.10.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@stylistic/eslint-plugin-js": "^4.0.1",
+    "eslint": "^9.21.0",
+    "globals": "^16.0.0",
+    "nodemon": "^3.1.9"
+  }
+}
